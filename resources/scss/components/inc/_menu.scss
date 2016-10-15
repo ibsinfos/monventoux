@@ -1,0 +1,92 @@
+.main-menu {
+    position : fixed;
+    top      : 0;
+    right    : 0;
+    z-index  : 3;
+
+    > a {
+        float       : right;
+        padding     : 0;
+        width       : 84px;
+        height      : 62px;
+        line-height : 62px;
+        text-align  : center;
+    }
+    .list {
+        @include block(absolute);
+        overflow   : hidden;
+        width      : 240px;
+        background : $white;
+        padding    : 80px 30px 10px;
+        right      : 0;
+        @include transform(translate3d(320px, 0, 0));
+        @include transition(all 0.5s $ease-in-quad);
+
+        ul {
+            list-style-type : none;
+            opacity         : 0;
+            @include transition(opacity 0.3s $ease-in-quad);
+
+            li {
+                padding : 2px 0;
+            }
+            a {
+                color          : $black;
+                padding-bottom : 1px;
+                border-bottom  : 1px solid rgba($black, 0);
+                @include transition(border-color 0.3s $ease-out-quad);
+                &:hover {
+                    border-color : $black;
+                }
+            }
+        }
+
+        .logo {
+            background : url('svg/menusporta.svg') no-repeat top center;
+            border     : 0;
+            padding    : 0;
+            margin     : 20px 0;
+            right      : 90px;
+            top        : 20px;
+            @include block(fixed);
+            @include size(135px, 30px);
+            @include bg-size(135px 30px);
+            @include transform(translate3d(-320px, 0, 0));
+            @include transition(all 0.5s $ease-in-quad);
+        }
+    }
+    &.open {
+
+        .list {
+            @include transform(translate3d(0, 0, 0));
+            @include transition(all 0.5s $ease-out-quad);
+
+            .logo {
+                @include transform(translate3d(0, 0, 0));
+                @include transition(all 0.5s $ease-out-quad);
+            }
+            ul {
+                opacity : 1;
+                @include transition(opacity 0.4s $ease-out-quad 0.4s);
+            }
+
+        }
+    }
+}
+
+.ie {
+    .main-menu {
+        .list {
+            .logo {
+                @include transform(translate3d(0, 0, 0));
+            }
+
+        }
+        &:not(.open) {
+            .list .logo {
+                display : none !important;
+            }
+        }
+    }
+
+}

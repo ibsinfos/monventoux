@@ -1,0 +1,92 @@
+
+#logo {
+    background  : url('svg/monventoux.svg') no-repeat top center;
+    border      : 0;
+    padding     : 0;
+    margin      : 10px auto 0;
+    text-indent : -9999px;
+    opacity     : 1;
+    visibility  : visible;
+    @include block;
+    @include size(126px, 90px);
+    @include bg-size(126px 90px);
+    @include transition-property(opacity, visibility);
+    @include transition-duration(0.7s);
+    @include transition-timing-function($ease-out-quad);
+    @include transition-delay(0.3s);
+
+    &.invisible {
+        opacity    : 0;
+        visibility : hidden;
+    }
+}
+
+#logo-gold {
+    background  : url('svg/monventoux-gold.svg') no-repeat top center;
+    border      : 0;
+    padding     : 0;
+    margin      : 10px auto 0;
+    text-indent : -9999px;
+    opacity     : 1;
+    visibility  : visible;
+    @include block;
+    @include size(126px, 90px);
+    @include bg-size(126px 90px);
+    @include transition-property(opacity, visibility);
+    @include transition-duration(0.7s);
+    @include transition-timing-function($ease-out-quad);
+    @include transition-delay(0.3s);
+
+    &.invisible {
+        opacity    : 0;
+        visibility : hidden;
+    }
+}
+
+#sportalogo {
+    background  : url('svg/footersporta.svg') no-repeat top center;
+    border      : 0;
+    padding     : 0;
+    margin      : 20px 0;
+    text-indent : -9999px;
+    opacity     : 1;
+    visibility  : visible;
+    right       : 90px;
+    top         : 0;
+    @include block(absolute);
+    @include size(135px, 30px);
+    @include bg-size(135px 30px);
+    @include transition-property(opacity, visibility);
+    @include transition-duration(0.7s);
+    @include transition-timing-function($ease-out-quad);
+    @include transition-delay(0.3s);
+
+    &.invisible {
+        opacity    : 0;
+        visibility : hidden;
+    }
+}
+
+@media #{$medium-up} {
+    body.page #logoheader {
+        height : 170px;
+    }
+}
+
+@media #{$large-up} {
+    body.page #logoheader {
+        max-width : 320px;
+    }
+
+    #logo {
+        margin : 20px 15px;
+        @include size(140px, 100px);
+        @include bg-size(140px 100px);
+    }
+
+    #logo-gold {
+        margin : 20px 15px;
+        @include size(140px, 100px);
+        @include bg-size(140px 100px);
+    }
+}

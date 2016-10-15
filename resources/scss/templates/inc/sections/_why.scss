@@ -1,0 +1,80 @@
+.section-why {
+    background : rgba($white, 0.9);
+
+    div {
+    }
+
+    h5, p {
+        text-align : center;
+    }
+    p {
+        font-size   : rem_calc(14);
+        line-height : rem_calc(24);
+    }
+
+    img {
+        @include size(100%, 80px);
+        object-fit : contain;
+        margin     : 10px auto;
+    }
+
+    .button {
+        @include block;
+        small, span {
+            @include block;
+            width : 100%;
+        }
+
+        span {
+            color      : rgba($white, 0.5);
+            font-size  : 40%;
+            margin-top : 10px;
+        }
+    }
+
+}
+
+@media #{$medium-up} {
+    .section-why {
+        padding-top    : 20px;
+        padding-bottom : 50px;
+
+        img {
+            float  : left;
+            margin : 0px 12px 8px -10px;
+        }
+
+        .button {
+            margin-top    : 17px;
+            margin-bottom : 40px;
+            span {
+                position   : absolute;
+                color      : $darkblue;
+                font-size  : 45%;
+                margin-top : 0;
+                top        : 110px;
+                left       : 0;
+                right      : 0;
+            }
+        }
+    }
+}
+
+@media #{$large-up} {
+    .section-why {
+        padding-top : 50px;
+        .button {
+            margin-top : 40px;
+        }
+    }
+}
+
+.ie {
+    .section-why {
+        img {
+            @include size(auto, 80px);
+            margin : 10px auto;
+            @include clearfix();
+        }
+    }
+}

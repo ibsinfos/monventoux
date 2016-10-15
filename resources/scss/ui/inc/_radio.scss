@@ -1,0 +1,45 @@
+label {
+
+    [type="radio"] {
+        border   : 0;
+        clip     : rect(0 0 0 0);
+        @include square(1px);
+        margin   : -1px;
+        overflow : hidden;
+        padding  : 0;
+        position : absolute;
+
+        + span {
+            display : block;
+
+            &:before {
+                content        : '';
+                @include inline-block();
+                @include square(26px);
+                @include border-radius(100%);
+                vertical-align : -6px;
+                background     : $white;
+                margin-right   : 10px;
+                border         : 6px solid $white;
+                box-shadow     : 0 0 0 3px rgba($white, 0);
+                @include transition(all 0.45s $ease-out-quad);
+            }
+        }
+
+        &:focus + span:before {
+            box-shadow : 0 0 0 3px rgba($white, 0.3);
+        }
+
+        &:checked + span:before {
+            background : $red;
+        }
+    }
+}
+
+@media #{$small-only} {
+    label:last-child {
+        [type="radio"] + span {
+            margin-bottom : 20px;
+        }
+    }
+}

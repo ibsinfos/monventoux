@@ -1,0 +1,47 @@
+.section-partners {
+    padding-bottom : 70px !important;
+    background     : $white;
+
+    figure {
+        margin     : 0;
+        padding    : 10px 0;
+        text-align : center;
+
+        img {
+            margin : 0 auto;
+            @include size(90%, auto);
+        }
+
+    }
+}
+
+@media #{$medium-up} {
+    .section-partners {
+        padding-bottom : 90px !important;
+
+        figure {
+
+            img {
+                @include size(100%, auto);
+            }
+
+        }
+    }
+}
+
+@media #{$large-up} {
+    .section-partners {
+        padding-bottom : 120px !important;
+
+        h3 {
+            padding-bottom : 50px;
+        }
+        figure {
+
+            img {
+                @include size(80%, auto);
+            }
+
+        }
+    }
+}

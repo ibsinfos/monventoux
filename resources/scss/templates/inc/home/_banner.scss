@@ -1,0 +1,76 @@
+.banner.home {
+    background-image    : url('img/home/banner.jpg');
+    background-position : center top;
+    background-attachment:fixed;
+    height              : 912px;
+    opacity             : 1;
+    visibility          : visible;
+    @include bg-size(cover);
+    @include transition-property(opacity, visibility);
+    @include transition-duration(0.7s);
+    @include transition-timing-function($ease-out-quad);
+
+    &.invisible {
+        opacity    : 0;
+        visibility : hidden;
+    }
+    div[slogan] {
+
+        h2 span, h4 {
+            opacity    : 1;
+            visibility : visible;
+            @include transition-property(opacity, visibility);
+            @include transition-duration(1s);
+            @include transition-timing-function($ease-out-quad);
+            @include transition-delay(0.5s);
+        }
+        h2 span.two {
+            @include transition-delay(1.5s);
+        }
+        h2 span.three {
+            @include transition-delay(2.5s);
+        }
+        span.four, h4 {
+            @include transition-delay(3.5s);
+        }
+        &.invisible {
+            h2 span, h4 {
+                opacity    : 0 !important;
+                visibility : hidden;
+            }
+        }
+
+        &.ready {
+            h2 span, h4 {
+                @include transition-duration(0s);
+                @include transition-delay(0s);
+            }
+        }
+    }
+    h2 {
+        margin      : 110px 0 0;
+        padding     : 0;
+        line-height : 1;
+    }
+    h4 {
+        line-height : 1;
+    }
+}
+
+@media #{$medium-up} {
+    .banner.home {
+        height : auto;
+        min-height: 100vh;
+        h2 {
+            margin-top : 124px;
+        }
+    }
+}
+
+@media #{$large-up} {
+    .banner.home {
+        h2 {
+            margin-top : 76px;
+        }
+    }
+}

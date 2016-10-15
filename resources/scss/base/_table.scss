@@ -1,0 +1,89 @@
+table {
+    width : 100%;
+
+    tr {
+        vertical-align : top;
+    }
+    td, th {
+        border             : 1px solid tint($blue, 70%);
+        border-right-width : 0;
+        padding            : 15px;
+
+        &:last-child {
+            border-right-width : 1px;
+        }
+    }
+
+    th {
+        background   : rgba($blue, 0.3);
+        color        : $blue;
+        border-color : tint($blue, 50%);
+    }
+    td {
+        background : rgba($blue, 0.1);
+    }
+
+    ul {
+        margin-left : 20px !important;
+        padding     : 0;
+    }
+
+    p {
+        text-align : center !important;
+    }
+
+    td.purple, th.purple {
+        border : 1px solid tint($purple, 70%);
+        h4, p, li {
+            color : shade($purple, 10%);
+        }
+        h4 small {
+            color : shade($purple, 20%);
+        }
+    }
+
+    th.purple {
+        background   : rgba($purple, 0.3);
+        color        : $purple;
+        border-color : tint($purple, 50%);
+    }
+    td.purple {
+        background : rgba($purple, 0.1);
+    }
+    td.red, th.red {
+        border : 1px solid tint($red, 70%);
+        h4, p, li {
+            color : shade($red, 10%);
+        }
+        h4 small {
+            color : shade($red, 20%);
+        }
+    }
+
+    th.red {
+        background   : rgba($red, 0.3);
+        color        : $red;
+        border-color : tint($red, 50%);
+    }
+    td.red {
+        background : rgba($red, 0.1);
+    }
+    td.gold, th.gold {
+        border : 1px solid tint($gold, 70%);
+        h4, p, li {
+            color : shade($gold, 10%);
+        }
+        h4 small {
+            color : shade($gold, 20%);
+        }
+    }
+
+    th.gold {
+        background   : rgba($gold, 0.3);
+        color        : shade($gold, 10%);
+        border-color : tint($gold, 50%);
+    }
+    td.gold {
+        background : rgba($gold, 0.1);
+    }
+}

@@ -1,0 +1,13 @@
+@mixin lato($italic : false) {
+    font-family : 'Lato', sans-serif;
+    font-weight : 400;
+    @if ($italic) {
+        font-style : italic;
+    }
+}
+
+@mixin flamenco {
+    font-family    : 'Flamenco', cursive;
+    font-weight    : 400;
+    text-transform : uppercase;
+}

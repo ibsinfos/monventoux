@@ -1,0 +1,13 @@
+nav.buttonblock {
+
+    .button {
+        @include block;
+    }
+
+    p {
+        text-align : center !important;
+        font-style : italic;
+        font-size  : 80%;
+        color      : rgba($darkblue, 0.7) !important;
+    }
+}

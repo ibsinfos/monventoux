@@ -1,0 +1,23 @@
+.section-banner {
+    img {
+        @include block;
+        margin    : 30px auto;
+        max-width : 728px;
+        @include size(100%, auto);
+        outline   : 0;
+        border    : 0;
+    }
+
+}
+
+@media #{$large-up} {
+    .section-banner img {
+        margin : 50px auto;
+    }
+}
+
+@media #{$xxlarge-up} {
+    .section-banner {
+        margin : 70px auto;
+    }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "monventoux",
+  "version": "2016.0.2",
+  "authors": [
+    "Wouter Claes <wclaes@sporta.be>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.7",
+    "angular-ui-router": "~0.2.15",
+    "fastclick": "~1.0.6",
+    "jquery-ui": "~1.11.4",
+    "jquery-placeholder": "~2.1.3",
+    "jquery-touchswipe": "~1.6.12",
+    "jquery.scrollTo": "~2.1.2",
+    "jquery": "~2.1.4",
+    "underscore": "~1.8.3"
+  }
+}

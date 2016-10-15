@@ -1,0 +1,43 @@
+.text-left {
+    @include text-left();
+}
+
+.text-center {
+    @include text-center();
+}
+
+.text-right {
+    @include text-right();
+}
+
+.text-justify {
+    @include text-justify();
+}
+
+.lato {
+    @include lato();
+
+    &.text-italic {
+        font-style : italic;
+    }
+}
+
+.flamenco {
+    @include flamenco;
+}
+
+.color-white {
+    color : $white;
+}
+
+.color-black {
+    color : $black;
+}
+
+.color-darkblue {
+    color : $darkblue;
+}
+
+.color-blue {
+    color : $blue;
+}

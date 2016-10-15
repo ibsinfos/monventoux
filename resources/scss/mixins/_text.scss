@@ -1,0 +1,28 @@
+@mixin text-left {
+    text-align : left;
+}
+
+@mixin text-center {
+    text-align : center;
+}
+
+@mixin text-right {
+    text-align : right;
+}
+
+@mixin text-justify {
+    text-align : justify;
+}
+
+@mixin word-wrap() {
+    word-break:     break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens:    auto;
+    hyphens:         auto;
+}
+
+@mixin ellipsis() {
+    overflow: hidden;
+//    white-space: nowrap;
+    text-overflow: ellipsis;
+}

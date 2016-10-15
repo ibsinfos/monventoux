@@ -1,0 +1,57 @@
+.section-newsletter {
+    background : $white;
+    text-align : center;
+    .button {
+        margin : 0 5px 10px;
+    }
+    input[type="email"] {
+        @include border-radius(5px);
+        text-align : left;
+
+        + button {
+            position    : absolute;
+            right       : 20px;
+            font-size   : rem_calc(14);
+            padding     : 0 30px;
+            line-height : rem_calc(40);
+            top         : 5px;
+            height      : rem_calc(40);
+        }
+    }
+}
+
+@media #{$medium-only} {
+    .section-newsletter {
+        h6 {
+            padding : 0 100px;
+        }
+    }
+}
+
+@media #{$medium-up} {
+    .section-newsletter {
+        padding-bottom : 50px !important;
+
+        .button {
+            margin-bottom : 20px;
+        }
+
+        input[type="email"] {
+
+            + button {
+                right       : 23px;
+                padding     : 0 40px;
+                top         : 8px;
+                font-size   : rem_calc(18);
+                line-height : rem_calc(56);
+                height      : rem_calc(56);
+            }
+        }
+    }
+}
+
+@media #{$large-up} {
+    .section-newsletter {
+        padding-bottom : 95px !important;
+    }
+}

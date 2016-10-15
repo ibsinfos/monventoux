@@ -1,0 +1,57 @@
+input[type="text"], input[type="email"], input[type="password"], input[type="number"] {
+    background  : $white;
+    box-shadow  : none !important;
+    border      : 1px solid $blue;
+    @include border-radius(3px);
+    @include lato();
+    padding     : 15px 10px;
+    font-size   : rem_calc(14);
+    line-height : rem_calc(50);
+    height      : rem_calc(50);
+    color       : $darkblue !important;
+
+    @include placeholder() {
+        color : $blue;
+        @include lato(true);
+    }
+
+    &:focus {
+        background   : $white;
+        border-color : $darkblue;
+    }
+}
+
+select {
+    background-color : $white;
+    box-shadow       : none !important;
+    border           : 1px solid $blue;
+    @include border-radius(3px);
+    @include lato();
+    padding          : 15px 10px;
+    font-size        : rem_calc(14);
+    line-height      : 1 !important;
+    height           : rem_calc(50);
+    color            : $darkblue;
+
+    &:focus {
+        border-color : $darkblue;
+    }
+}
+
+@media #{$medium-up} {
+    body:not(.auth) {
+        input[type="text"], input[type="email"], input[type="password"], input[type="number"] {
+            padding     : 25px 15px;
+            font-size   : rem_calc(18);
+            line-height : rem_calc(72);
+            height      : rem_calc(72);
+        }
+    }
+}
+
+.ie {
+    select, input[type="text"], input[type="email"], input[type="password"], input[type="number"] {
+        line-height : 100% !important;
+        padding:0 15px !important;
+    }
+}

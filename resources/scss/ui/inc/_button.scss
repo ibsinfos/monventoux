@@ -1,0 +1,175 @@
+button, .button {
+    @include lato(true);
+
+    &.rounded {
+        @include border-radius(3px);
+    }
+    &.block {
+        display : block;
+    }
+    &.darkblue {
+        background-color : $darkblue;
+        &:hover {
+            background-color : tint($darkblue, $button-hover-tint-percentage);
+        }
+    }
+    &.white {
+        background-color : $white;
+        &:hover {
+            background-color : shade($white, $button-hover-tint-percentage);
+            color            : inherit;
+        }
+    }
+    &.blue {
+        background-color : $blue;
+        &:hover {
+            background-color : tint($blue, $button-hover-tint-percentage);
+        }
+    }
+    &.purple {
+        background-color : $purple;
+        &:hover {
+            background-color : tint($purple, $button-hover-tint-percentage);
+        }
+    }
+    &.red {
+        background-color : $red;
+        &:hover {
+            background-color : tint($red, $button-hover-tint-percentage);
+        }
+    }
+    &.gold {
+        background-color : $gold;
+        &:hover {
+            background-color : tint($gold, $button-hover-tint-percentage);
+        }
+    }
+
+    &.social {
+        @include transition(all 0.3s $ease-out-quad);
+        width : 200px;
+        //iframe {
+        //    opacity    : 0;
+        //    visibility : hidden;
+        //}
+
+        &.twitter {
+            background-color : #67A8F1;
+
+            .twitter-follow-button {
+                @include block(absolute !important);
+                top        : 50%;
+                left       : 50%;
+                opacity    : 0;
+                visibility : hidden;
+                margin     : -10px -68px !important;
+                width      : 136px !important;
+            }
+            &:hover {
+                backgound-color : $darkblue !important;
+                .twitter-follow-button {
+                    opacity    : 1;
+                    visibility : visible;
+                }
+            }
+        }
+        &.facebook {
+            background-color : #495A9E;
+
+            .fb-like {
+                @include block(absolute !important);
+                top         : 0;
+                left        : 0;
+                @include square(100%);
+                line-height : 200%;
+                opacity     : 0;
+                visibility  : hidden;
+            }
+
+            &:hover {
+                backgound-color : $darkblue !important;
+                .fb-like {
+                    opacity    : 1;
+                    visibility : visible;
+                }
+            }
+        }
+
+        &:not(.vimeo):hover {
+            color : rgba($darkblue, 0);
+        }
+
+    }
+
+    .spinner {
+        text-indent : -9999px;
+        display     : none;
+    }
+
+    &.loading {
+        color            : $blue !important;
+        background-color : $blue !important;
+        opacity          : 1 !important;
+
+        .spinner {
+            @include block(absolute);
+            @include square(100%);
+            text-indent : 0;
+            margin      : 0;
+            top         : 0;
+            left        : 0;
+            text-align  : center;
+        }
+
+        .spinner > div {
+            width             : 18px;
+            height            : 18px;
+            background-color  : $white;
+            border-radius     : 100%;
+            display           : inline-block;
+            margin            : 0 5px;
+            -webkit-animation : sk-bouncedelay 1.4s infinite ease-in-out both;
+            animation         : sk-bouncedelay 1.4s infinite ease-in-out both;
+        }
+
+        .spinner .bounce1 {
+            -webkit-animation-delay : -0.32s;
+            animation-delay         : -0.32s;
+        }
+
+        .spinner .bounce2 {
+            -webkit-animation-delay : -0.16s;
+            animation-delay         : -0.16s;
+        }
+    }
+
+    &[type="submit"] {
+        &:hover {
+            background-color : $darkblue;
+        }
+    }
+}
+
+@-webkit-keyframes sk-bouncedelay {
+    0%, 80%, 100% { -webkit-transform : scale(0) }
+    40% { -webkit-transform : scale(1.0) }
+}
+
+@keyframes sk-bouncedelay {
+    0%, 80%, 100% {
+        -webkit-transform : scale(0);
+        transform         : scale(0);
+    }
+    40% {
+        -webkit-transform : scale(1.0);
+        transform         : scale(1.0);
+    }
+}
+
+.ie {
+    .button.social {
+        .twitter-follow-button, .fb-like {
+            opacity : 0 !important;
+        }
+    }
+}

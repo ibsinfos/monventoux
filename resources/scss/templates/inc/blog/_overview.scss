@@ -1,0 +1,41 @@
+.blogitem {
+    border-bottom  : 1px solid rgba($darkblue, 0.2);
+    padding-bottom : 25px;
+    margin-bottom  : 25px;
+    text-align     : left;
+
+    img {
+        @include square(100%);
+        max-height : 100px;
+        background : rgba($blue, .2);
+        object-fit : cover;
+    }
+
+    h4 small {
+        float : right;
+    }
+
+    &:last-of-type {
+        border-bottom : 0;
+        margin-bottom : 0;
+    }
+}
+
+.blog-month {
+    padding-top : 30px;
+    text-align  : center;
+
+    h3 {
+        @include inline-block;
+        background : rgba($blue, 0.3);
+        color      : $blue;
+        padding    : 3px 10px;
+        margin     : 0 0 20px;
+        @include border-radius(3px);
+    }
+}
+
+.blog, .blog-month, .blogitem {
+    padding-left  : 0 !important;
+    padding-right : 0 !important;
+}

@@ -1,0 +1,16 @@
+$button-tny: rem-calc(3);
+$button-margin-bottom : rem-calc(0) !default;
+$button-font-family: 'Lato' !default;
+$button-font-color: $white  !default;
+$button-font-color-alt: $black  !default;
+$button-hover-tint-percentage: 10%;
+$button-font-tny: rem-calc(18)  !default;
+$button-font-sml: rem-calc(18)  !default;
+$button-font-med: rem-calc(24)  !default;
+$button-font-lrg: rem-calc(30)  !default;
+$button-font-align: center  !default;
+$button-border-width : 0  !default;
+$button-border-style : solid  !default;
+$button-bg-color: $red  !default;
+$button-bg-hover: tint($red, $button-hover-tint-percentage) !default;
+$button-disabled-opacity : 0.5  !default;

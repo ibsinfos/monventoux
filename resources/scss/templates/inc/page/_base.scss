@@ -1,0 +1,24 @@
+.page-sections {
+    opacity    : 1;
+    visibility : visible;
+    @include block;
+    @include transition-property(opacity, visibility);
+    @include transition-duration(0.5s);
+    @include transition-timing-function($ease-out-quad);
+    @include transition-delay(2s);
+
+    &.invisible {
+        opacity    : 0;
+        visibility : hidden;
+    }
+
+    &.ready {
+        @include transition-delay(0s);
+    }
+
+    .page-content {
+        background : $white;
+        padding:50px 0;
+    }
+
+}

@@ -1,0 +1,46 @@
+
+.page-head {
+    margin     : 20px 0 0;
+    @include block;
+    z-index    : -1;
+    width      : 100%;
+    padding    : 0;
+    text-align : center;
+    height     : 200px;
+
+    button, .button {
+        @include block;
+        width  : 100%;
+        margin : 5px 0;
+
+        &:not(.active) {
+            background : rgba($white, 0) !important;
+            box-shadow : inset 0px 0px 0px 3px $white;
+        }
+    }
+}
+
+@media #{$medium-up} {
+    .page-head {
+        @include inline-block;
+        position   : absolute;
+        top        : 120px;
+        text-align : center;
+        margin     : 0;
+        left       : 0;
+        z-index    : 2;
+
+        button, .button {
+            @include inline-block;
+            width  : auto;
+            margin : 0 5px;
+        }
+    }
+
+}
+
+@media #{$large-up} {
+    .page-head {
+        top : 60px;
+    }
+}

@@ -1,0 +1,76 @@
+.section-quotes {
+    background : rgba(#edf5f9, 0.87);
+
+    p {
+        font-size   : rem_calc(18);
+        line-height : rem_calc(30);
+    }
+
+    .quoteimg {
+        @include block;
+        @include size(100%, 100px);
+        padding    : 0;
+        margin     : 0;
+        text-align : center;
+        .text {
+            margin-left    : 10px;
+            @include inline-block();
+            vertical-align : middle;
+        }
+        h6, p {
+            text-align  : left;
+            margin      : 0;
+            padding     : 0;
+            line-height : rem_calc(18);
+        }
+        p { font-size : rem_calc(14); }
+        img {
+            @include inline-block();
+            @include square(80px);
+            @include border-radius(100%);
+            vertical-align : middle;
+            object-fit     : cover;
+            position       : relative;
+            margin         : 10px 0;
+        }
+    }
+
+    .button {
+        @include block;
+        small, span {
+            @include block;
+            width : 100%;
+        }
+
+        span {
+            color      : rgba($white, 0.5);
+            font-size  : 40%;
+            margin-top : 10px;
+        }
+    }
+
+}
+
+@media #{$medium-up} {
+    .section-quotes {
+        padding-bottom : 50px;
+
+        .button {
+            margin-top : 74px;
+        }
+    }
+}
+
+@media #{$large-up} {
+    .section-quotes {
+        .button {
+            margin-top : 58px;
+        }
+    }
+
+    .page {
+        .section-quotes {
+            padding-top : 30px;
+        }
+    }
+}

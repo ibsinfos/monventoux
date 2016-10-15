@@ -1,0 +1,46 @@
+.media-overlay {
+
+    .close {
+        background  : url('img/overlay/close.png') no-repeat center center;
+        @include square(52px);
+        @include block(absolute);
+        left        : 25px;
+        top         : 25px;
+        border      : 2px solid rgba($blue, 0.25);
+        outline     : 0;
+        text-indent : -9999px;
+        @include border-radius(100%);
+        @include transition-property(all, border-color);
+        @include transition-duration(0.2s, 0.6s);
+        @include transition-timing-function($ease-out-quad, $ease-in-out-quad);
+        @include transform(rotate(0deg));
+        cursor      : pointer;
+        &:hover {
+            border-color : $blue;
+            @include transition-duration(0.2s, 1s);
+            @include transition-timing-function($ease-out-quad, $ease-out-quad);
+            @include transform(rotate(90deg));
+        }
+    }
+}
+
+.retina {
+    .media-overlay {
+        .close {
+            background-image : url('img/overlay/close@2x.png');
+            @include bg-size(52px);
+        }
+    }
+}
+
+.msedge {
+    .media-overlay {
+
+        .close {
+            &:hover {
+                @include transform(rotate(0deg));
+            }
+        }
+    }
+
+}

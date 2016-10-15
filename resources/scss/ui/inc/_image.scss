@@ -1,0 +1,12 @@
+.imageonload {
+    @include transition-property(visibility, opacity);
+    @include transition-duration(0.7s);
+    @include transition-timing-function($ease-out-quad);
+    opacity    : 0;
+    visibility : hidden;
+
+    &.ready {
+        visibility : visible;
+        opacity    : 1;
+    }
+}

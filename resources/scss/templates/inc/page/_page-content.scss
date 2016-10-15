@@ -1,0 +1,25 @@
+.page-sections .page-content {
+
+    h1, h2, h3 {
+        @include flamenco();
+    }
+    h4, h5, h6 {
+        @include lato(true);
+    }
+
+    p, li {
+        @include lato();
+
+        i {
+            font-style : italic;
+        }
+
+        strong {
+            font-weight : 600;
+        }
+    }
+
+    ul {
+        margin-left : 40px;
+    }
+}

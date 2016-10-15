@@ -1,0 +1,38 @@
+.media-overlay {
+    @include block(fixed);
+    z-index    : 999;
+    left       : 0;
+    top        : 0;
+    right      : 0;
+    bottom     : 0;
+    background : rgba($black, 0.9);
+
+    &.hide {
+        display : none;
+    }
+
+    img, iframe {
+        display : none;
+        border  : 0;
+    }
+
+    &.image {
+        iframe {
+            display : none;
+        }
+        img {
+            @include block;
+            @include square(100%);
+            object-fit : contain;
+        }
+    }
+
+    &.video {
+        img {
+            display : none;
+        }
+        iframe {
+            @include block;
+        }
+    }
+}

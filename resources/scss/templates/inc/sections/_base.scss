@@ -1,0 +1,48 @@
+.home-sections {
+    margin     : 174px 0 0;
+    opacity    : 1;
+    visibility : visible;
+    @include block;
+    @include transition-property(opacity, visibility);
+    @include transition-duration(1s);
+    @include transition-timing-function($ease-out-quad);
+    @include transition-delay(3.5s);
+    //overflow-x : hidden;
+
+    &.invisible {
+        opacity    : 0;
+        visibility : hidden;
+    }
+
+    &.ready {
+        @include transition-delay(0s);
+    }
+
+    > section {
+        padding : 25px 0;
+
+        h2 {
+            margin      : 0;
+            padding     : 0;
+            line-height : 1;
+        }
+
+        h6 {
+            margin-bottom : 30px;
+        }
+    }
+}
+
+@media #{$medium-up} {
+
+    .home-sections {
+        margin-top : 214px;
+    }
+}
+
+@media #{$large-up} {
+
+    .home-sections {
+        margin-top : 255px;
+    }
+}

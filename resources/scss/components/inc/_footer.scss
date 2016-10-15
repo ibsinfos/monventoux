@@ -1,0 +1,153 @@
+footer.mainfooter {
+    background     : $blue;
+    padding-top    : rem_calc(25);
+    padding-bottom : rem_calc(25);
+    opacity        : 1;
+    visibility     : visible;
+    text-align     : center;
+    position       : relative;
+    @include transition-property(opacity, visibility);
+    @include transition-duration(0.5s);
+    @include transition-timing-function($ease-out-quad);
+    @include transition-delay(3s);
+
+    &.invisible {
+        opacity    : 0;
+        visibility : hidden;
+    }
+
+    figure { display : none; }
+
+    ul {
+        @include inline-block();
+        margin     : 0 16px;
+        padding    : 0 0 10px;
+        text-align : left;
+        li {
+            font-size       : rem_calc(14);
+            font-style      : italic;
+            margin          : 0;
+            padding         : 0;
+            list-style-type : none;
+            color           : $white;
+        }
+    }
+
+    a {
+        color         : $white;
+        border-bottom : 1px solid rgba($white, 0);
+        @include transition-property(border-color);
+        @include transition-duration(0.3s);
+        @include transition-timing-function($ease-out-quad);
+        &:hover {
+            color        : $white;
+            border-color : rgba($white, .5);
+        }
+    }
+
+    .brandline {
+        padding-top    : 20px;
+        padding-bottom : 20px;
+        p {
+            padding     : 0;
+            margin      : 0;
+            line-height : 1;
+            font-size   : rem_calc(13);
+
+            &.address {
+                padding:15px 0 0 0;
+                font-size   : rem_calc(13);
+                line-height : 1.7;
+            }
+        }
+
+        span {
+            @include block;
+            margin      : 0 auto;
+            background  : no-repeat center center;
+            text-indent : -9999px;
+
+            &.monventoux {
+                margin-bottom    : 10px;
+                background-image : url('svg/footermv.svg');
+                @include size(62px, 44px);
+                @include bg-size(62px 44px);
+            }
+            &.sporta {
+                margin-top       : 10px;
+                background-image : url('svg/footersporta.svg');
+                @include size(90px, 20px);
+                @include bg-size(90px 20px);
+            }
+        }
+    }
+
+}
+
+@media #{$medium-up} {
+    footer.mainfooter {
+
+        ul {
+            padding : 0;
+            margin  : 0 20px;
+            &:first-child {
+                @include inline-block;
+                text-align : left;
+                padding    : 0;
+                margin     : 0 20px;
+                li {
+                    @include block();
+                    margin : 0;
+                }
+            }
+        }
+
+        .brandline {
+            padding-top    : 20px;
+            padding-bottom : 20px;
+
+            span {
+                @include inline-block;
+                vertical-align : middle;
+
+                &.monventoux {
+                    margin : -5px 10px 0 0;
+                }
+                &.sporta {
+                    margin : 0 0 0 10px;
+                }
+            }
+            a {
+                border : 0 !important;
+            }
+        }
+    }
+}
+
+@media #{$xlarge-up} {
+    footer.mainfooter {
+        padding : 40px 0;
+        figure {
+            @include block(absolute);
+            background : url('svg/footermountains.svg') no-repeat top center;
+            @include bg-size(274px 206px);
+            @include size(274px, 120px);
+            right      : 0;
+            top        : -100px;
+        }
+
+        ul {
+            margin : 0 40px !important;
+            li {
+                font-size : rem_calc(18);
+                padding   : 5px 0;
+            }
+        }
+
+        .brandline {
+
+            p { font-size : rem_calc(16) }
+        }
+    }
+
+}

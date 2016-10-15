@@ -1,0 +1,75 @@
+.section-images {
+  @include block;
+  margin     : 0;
+  background : $white url('img/home/videobg.jpg') no-repeat center center;
+  @include bg-size(cover);
+  text-align : center;
+  @include size(100%, 190px);
+
+  .overlay {
+    @include block(absolute);
+    left       : 0;
+    top        : 0;
+    right      : 0;
+    bottom     : 0;
+    background : rgba($darkblue, 0.8);
+    background : -moz-linear-gradient(top, rgba($darkblue, 0.8) 0%, rgba($blue, 0.8) 100%);
+    background : -webkit-gradient(top, bottom, color-stop(0%, rgba($darkblue, 0.8)), color-stop(100%, rgba($blue, 0.8)));
+    background : -webkit-linear-gradient(top, rgba($darkblue, 0.8) 0%, rgba($blue, 0.8) 100%);
+    background : -o-linear-gradient(top, rgba($darkblue, 0.8) 0%, rgba($blue, 0.8) 100%);
+    background : -ms-linear-gradient(top, rgba($darkblue, 0.8) 0%, rgba($blue, 0.8) 100%);
+    background : linear-gradient(top bottom, rgba($darkblue, 0.8) 0%, rgba($blue, 0.8) 100%);
+    filter     : progid:DXImageTransform.Microsoft.gradient(startColorstr='#051639', endColorstr='#12577d', GradientType=0);
+  }
+
+  .container {
+    @include inline-block;
+    overflow    : auto;
+    white-space : nowrap;
+    padding     : 30px 25px;
+    margin      : 0 auto;
+    position    : relative;
+  }
+
+  figure {
+    margin  : 0;
+    padding : 0 5px;
+    @include inline-block;
+  }
+
+  img {
+    border     : 5px solid $white;
+    @include border-radius(1px);
+    @include size(200px, 130px);
+    object-fit : cover;
+  }
+
+  &.images-with-button {
+    height : 249px;
+    .button {
+      margin : 148px 0 0 0;
+    }
+
+  }
+}
+
+.program section#images .button {
+  margin-top: 182px;
+}
+
+@media #{$xlarge-up} {
+  .section-images {
+    height : 200px;
+    img {
+      @include size(210px, 140px);
+    }
+
+    &.images-with-button {
+      height : 259px;
+      .button {
+        margin-top : 158px;
+      }
+
+    }
+  }
+}

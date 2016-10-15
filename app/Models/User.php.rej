@@ -1,0 +1,17 @@
+diff a/app/Models/User.php b/app/Models/User.php	(rejected hunks)
+@@ -16,4 +16,15 @@
+     protected $primaryKey = 'sadn_id';
+     protected $hidden = ['password', 'remember_token'];
+ 
++    public function timingCannibale()
++    {
++        return $this->hasOne('App\Models\TimingCannibale', 'persoon_id', 'sadn_id');
++    }
++
++    public function timingVentourist()
++    {
++        return $this->hasOne('App\Models\TimingVentourist', 'persoon_id', 'sadn_id');
++    }
++
++
+ }

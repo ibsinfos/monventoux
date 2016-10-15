@@ -1,0 +1,29 @@
+.row {
+    max-width : 90rem;
+}
+
+@media #{$small-only} {
+    .row {
+        padding-left  : 15px;
+        padding-right : 15px;
+        //        min-width     : 300px;
+    }
+}
+
+@media #{$medium-only} {
+    .row {
+        width : $medium-row-width;
+    }
+}
+
+@media #{$large-only} {
+    .row {
+        width : $large-row-width;
+    }
+}
+
+@media #{$xlarge-only} {
+    .row {
+        width : $xlarge-row-width;
+    }
+}

@@ -1,0 +1,62 @@
+.section-event {
+    @include block;
+    background : rgba($white, 0.9);
+    > .row > .columns {
+        padding-left  : 0;
+        padding-right : 0;
+    }
+    .button {
+        @include block;
+        margin-bottom : 10px;
+
+        small {
+            font-size  : 80%;
+            @include block;
+            margin-top : 2px;
+        }
+    }
+}
+
+@media #{$medium-up} {
+
+    .section-event {
+
+        .button {
+            cursor        : pointer;
+            padding       : 20px 0;
+            margin-bottom : 30px;
+
+            small {
+                opacity    : 0;
+                visibility : hidden;
+                position   : absolute;
+                top        : 70px;
+                margin     : 0;
+                padding    : 0;
+                left       : -10px;
+                right      : -10px;
+                @include transition-property(opacity, visibility);
+                @include transition-duration(0.35s);
+                @include transition-timing-function($ease-out-quart);
+            }
+
+            &.purple small { color : $purple }
+            &.red small { color : $red }
+            &.gold small { color : $gold }
+
+            &:hover {
+                small {
+                    opacity    : 1;
+                    visibility : visible;
+                }
+            }
+        }
+    }
+}
+
+@media #{$large-up} {
+
+    .section-event {
+        margin-top : 75px;
+    }
+}
